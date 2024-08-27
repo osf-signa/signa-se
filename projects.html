@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signa - Our Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">SIGNA <span class="tertiary-text">#</span> <span class="highlight">
+                        Human Software</span></div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="signature.html">Signature</a>
+                    <a href="projects.html" class="current-page">Projects</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="code-background"></div>
+            <div class="hero-content">
+                <h1><span class="tertiary-text">#</span> Our <span class="highlight" id="typed"></span></h1>
+                <p>Transforming businesses through automation</p>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2><span class="tertiary-text">#</span> Latest Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Telecom Billing Automation</h3>
+                    <p>Developed a comprehensive billing system for a major telecom provider, automating invoice
+                        generation and reducing processing time by 75%.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Supply Chain Optimization</h3>
+                    <p>Implemented an AI-driven supply chain management system for a global retailer, improving
+                        inventory accuracy by 30% and reducing logistics costs by 20%.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Healthcare Data Integration</h3>
+                    <p>Created a centralized data platform for a hospital network, enabling seamless information sharing
+                        between departments and improving patient care coordination.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Financial Reporting Automation</h3>
+                    <p>Designed and implemented an automated financial reporting system for a multinational corporation,
+                        reducing report generation time from days to hours.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Smart City Traffic Management</h3>
+                    <p>Developed an IoT-based traffic management system for a major city, optimizing traffic flow and
+                        reducing average commute times by 15%.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Signa. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        function createCodeBackground() {
+            const codeBackground = document.querySelector('.code-background');
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            const rows = 20;
+            const cols = 40;
+
+            for (let i = 0; i < rows; i++) {
+                const row = document.createElement('div');
+                for (let j = 0; j < cols; j++) {
+                    const span = document.createElement('span');
+                    span.textContent = characters[Math.floor(Math.random() * characters.length)];
+                    span.style.opacity = Math.random();
+                    span.style.animationDelay = `${Math.random() * 5}s`;
+                    row.appendChild(span);
+                }
+                codeBackground.appendChild(row);
+            }
+        }
+
+        createCodeBackground();
+
+        var typed = new Typed('#typed', {
+            strings: ['projects', 'innovations', 'solutions'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
