@@ -327,3 +327,13 @@ code {
 .project-details strong {
     color: var(--secondary-color);
 }
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:hover, .logo-link:focus {
+    text-decoration: none;
+    color: inherit;
+}
