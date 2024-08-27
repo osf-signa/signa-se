@@ -152,10 +152,12 @@ code {
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--secondary-color);
 }
 
 .hero-content p {
     font-size: 1.2rem;
+    color: var(--text-color);
 }
 
 .cta-button {
@@ -182,7 +184,7 @@ code {
 .signature-hero {
     background-color: var(--bg-color);
     position: relative;
-    height: 40vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,14 +206,14 @@ code {
 }
 
 .signature-hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    color: var(--secondary-color);
 }
 
 .signature-hero p {
-    font-size: 1.4rem;
-    color: var(--secondary-color);
+    font-size: 1.2rem;
+    color: var(--text-color);
 }
 
 .signature-features {
@@ -233,7 +235,7 @@ code {
 
 .projects-hero {
     position: relative;
-    height: 40vh;  // Reduced from 50vh to 40vh
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,7 +257,7 @@ code {
 }
 
 .projects-hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--secondary-color);
 }
