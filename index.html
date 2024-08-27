@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signa - Human Software</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Jetbrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #94a3b8;
+            --highlight-color: #38bdf8;
+            --secondary-color: #e2e8f0;
+            --tertiary-color: #39FF14;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* font-family: 'Fira Code', monospace; */
+            font-family: 'Jetbrains Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tertiary-text {
+            color: var(--tertiary-color);
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--highlight-color);
+            padding-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .nav-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight-color);
+        }
+
+        h1,
+        h2 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .section {
+            /* margin-bottom: 60px; */
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--highlight-color);
+            color: var(--bg-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0ea5e9;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--secondary-color);
+            border-top: 1px solid var(--highlight-color);
+            padding-top: 20px;
+        }
+
+        .highlight {
+            color: var(--highlight-color);
+        }
+
+        .center-div {
+            margin: auto;
+            text-align: center;
+        }
+
+        .typed-cursor {
+            opacity: 1;
+            animation: typedjsBlink 0.7s infinite;
+            -webkit-animation: typedjsBlink 0.7s infinite;
+            animation: typedjsBlink 0.7s infinite;
+        }
+
+        @keyframes typedjsBlink {
+            50% {
+                opacity: 0.0;
+            }
+        }
+
+        @-webkit-keyframes typedjsBlink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .code-background div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .code-background span {
+            font-size: 1.2rem;
+            color: var(--highlight-color);
+            animation: flicker 5s infinite;
+        }
+
+        @keyframes flicker {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .hero {
+            position: relative;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .code-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">SIGNA <span class="tertiary-text">#</span> <span class="highlight">Human
+                        Software</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#what-we-do">What We Do</a>
+                    <a href="#about-us">About Us</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="code-background"></div>
+            <div class="hero-content">
+                <h1><span class="tertiary-text">#</span> We are <span class="highlight" id="typed"></span></h1>
+                <p>Automating processes, freeing human potential.</p>
+            </div>
+        </section>
+
+        <section class="section" id="what-we-do">
+            <h1><span class="tertiary-text">#</span> What We Do</h1>
+            <p>We are very good at automating manual processes. Especially processes that involve many people over a
+                long time. Such processes tie up a lot of human resources. Often these processes can be replaced with
+                clever use of Information Technology. That is precisely what we do. We place burden where it belongs. On
+                the back of a machine.
+            <p>Our mission is clear: we shift the burden from humans to machines, freeing your team to focus on
+                high-value tasks that truly require human insight and creativity.</p>
+        </section>
+
+        <section class="section" id="about-us">
+            <h1><span class="tertiary-text">#</span> About Us</h1>
+            <p>Founded in 2007, Signa has been at the forefront of systems development and IT consulting. Our core team,
+                based in Stockholm, Sweden, leverages a vast network of exceptional developers and testers to deliver
+                cutting-edge solutions.</p>
+            <p>We're experts in business analysis and project management, with plenty of real-world experience under
+                our belts. Our small but mighty team means we can move fast, adapt quickly, and give each client's
+                project the attention it deserves. We're not just working for you – we're invested in your success.</p>
+        </section>
+
+        <section class="section" id="contact-us">
+            <h1><span class="tertiary-text">#</span> Contact Us</h1>
+            <p>We're always looking for new challenges and opportunities to help businesses like yours succeed.
+                Contact us on LinkedIn to learn more.</p>
+            <p>
+            <div class="center-div" style="margin-top: 40px;">
+                <a href="https://www.linkedin.com/in/hans-kärn-52b5031b/" class="cta-button" target="_blank">Contact us
+                    on LinkedIn</a>
+            </div>
+            </p>
+        </section>
+        <footer>
+            <!-- <p>&copy; 2024 Signa. All rights reserved.</p> -->
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('#typedz', {
+            strings: ['Innovators', 'Problem solvers', 'Developers'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+    <script>
+        function createCodeBackground() {
+            const codeBackground = document.querySelector('.code-background');
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            const rows = 20;
+            const cols = 40;
+
+            for (let i = 0; i < rows; i++) {
+                const row = document.createElement('div');
+                for (let j = 0; j < cols; j++) {
+                    const span = document.createElement('span');
+                    span.textContent = characters[Math.floor(Math.random() * characters.length)];
+                    span.style.opacity = Math.random();
+                    span.style.animationDelay = `${Math.random() * 5}s`;
+                    row.appendChild(span);
+                }
+                codeBackground.appendChild(row);
+            }
+        }
+
+        createCodeBackground();
+
+        var typed = new Typed('#typed', {
+            strings: ['problem solvers', 'innovators', 'developers'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
