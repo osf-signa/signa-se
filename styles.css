@@ -88,23 +88,6 @@ p {
     margin-bottom: 30px;
 }
 
-ul {
-    list-style-type: none;
-}
-
-li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 20px;
-}
-
-li::before {
-    content: "//";
-    color: var(--highlight-color);
-    position: absolute;
-    left: 0;
-}
-
 footer {
     margin-top: 60px;
     text-align: center;
@@ -231,4 +214,20 @@ code {
     color: var(--secondary-color);
 }
 
-// Remove or comment out the grid-background and grid-cell styles if they're not used elsewhere
+/* Keep and modify these signature-specific styles */
+.signature-features {
+    list-style-type: none;
+}
+
+.signature-feature-item {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.signature-feature-item::before {
+    content: "//";
+    color: var(--highlight-color);
+    position: absolute;
+    left: 0;
+}
