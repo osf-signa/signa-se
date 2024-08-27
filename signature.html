@@ -27,10 +27,10 @@
             </nav>
         </header>
 
-        <section class="hero">
-            <div class="code-background"></div>
+        <section class="hero signature-hero">
+            <div id="particles-js"></div>
             <div class="hero-content">
-                <h1><span class="tertiary-text">#</span> We are <span class="highlight" id="typed"></span></h1>
+                <h1><span class="tertiary-text">#</span> Signature</h1>
                 <p>Revolutionizing voice traffic trading</p>
             </div>
         </section>
@@ -81,34 +81,24 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        function createCodeBackground() {
-            const codeBackground = document.querySelector('.code-background');
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-            const rows = 20;
-            const cols = 40;
-
-            for (let i = 0; i < rows; i++) {
-                const row = document.createElement('div');
-                for (let j = 0; j < cols; j++) {
-                    const span = document.createElement('span');
-                    span.textContent = characters[Math.floor(Math.random() * characters.length)];
-                    span.style.opacity = Math.random();
-                    span.style.animationDelay = `${Math.random() * 5}s`;
-                    row.appendChild(span);
-                }
-                codeBackground.appendChild(row);
-            }
-        }
-
-        createCodeBackground();
-
-        var typed = new Typed('#typed', {
-            strings: ['innovators', 'deal makers', 'problem solvers'],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#38bdf8" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#38bdf8", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out" }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
         });
     </script>
 </body>
