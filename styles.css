@@ -30,6 +30,10 @@ body {
     color: var(--tertiary-color);
 }
 
+.base-color {
+    color: var(--text-color);
+}
+
 header {
     margin-bottom: 40px;
     border-bottom: 1px solid var(--highlight-color);
@@ -255,7 +259,7 @@ code {
 }
 
 .signature-feature-item::before {
-    content: "//";
+    content: "##";
     color: var(--highlight-color);
     position: absolute;
     left: 0;
